@@ -6,7 +6,7 @@ package olympy;
 
 service MedalService {
     rpc CreateMedal(CreateMedalReq) returns (Empty) {}
-    rpc GetMedal(GetMedalReq) returns (GetMedalRes) {}
+    rpc GetMedal(GetMedalReq) returns (Medal) {}
     rpc UpdateMedal(UpdateMedalReq) returns (Empty) {}
     rpc DeleteMedal(DeleteMedalReq) returns (Empty) {}
     rpc GetMedalRanking(RankingReq) returns (RankingRes) {}
@@ -41,10 +41,6 @@ message GetMedalReq{
 message DeleteMedalReq{
     string id = 1;
 }
-message GetMedalRes{
-    repeated Medal medal = 1;
-}
-
 message  UpdateMedalReq{
     string id = 1;
     string country_id = 2;
