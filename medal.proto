@@ -4,7 +4,7 @@ option go_package = "genproto/olympy";
 
 package olympy;
 
-import "country.proto";
+import "olympy_submodule/country.proto";
 service MedalService {
     rpc CreateMedal(CreateMedalReq) returns (Empty) {}
     rpc GetMedal(GetMedalReq) returns (Medal) {}
