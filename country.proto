@@ -6,7 +6,7 @@ package olympy;
 
 service CountryService{
     rpc CreateCountry(CreateCountryReq) returns (Void){}
-    rpc GetCountry(GetCountryReq) returns (GetCountryRes){}
+    rpc GetCountry(GetCountryReq) returns (Country){}
 }
 message CreateCountryReq{
     string name = 1;
@@ -18,7 +18,7 @@ message GetCountryReq{
     string name = 1;
 }
 
-message GetCountryRes{
+message Country{
     string id = 1;
     string name = 2;
     string flag = 3;

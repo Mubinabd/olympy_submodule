@@ -4,6 +4,7 @@ option go_package = "genproto/olympy";
 
 package olympy;
 
+import "country.proto";
 service MedalService {
     rpc CreateMedal(CreateMedalReq) returns (Empty) {}
     rpc GetMedal(GetMedalReq) returns (Medal) {}
@@ -19,7 +20,7 @@ message Filter {
 
 message Medal{
     string id = 1;
-    string country_id = 2;
+    Country country = 2;
     string type = 3;
     string event_id = 4;
     string athlete_id = 5;
