@@ -27,6 +27,15 @@ message Medal{
     string created_at = 6;
 }
 
+message MedalRes{
+    string id = 1;
+    string country_id = 2;
+    string type = 3;
+    string event_id = 4;
+    string athlete_id = 5;
+    string created_at = 6;
+}
+
 message CreateMedalReq{
     string country_id = 1;
     string type = 2;
@@ -55,5 +64,5 @@ message RankingReq{
 }
 
 message RankingRes{
-    repeated Medal medal = 1;
+    repeated MedalRes medal = 1;
 }
