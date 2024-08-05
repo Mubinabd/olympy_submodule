@@ -1,0 +1,25 @@
+syntax="proto3";
+
+option go_package="genproto/olympy";
+
+package olympy;
+
+service CountryService{
+    rpc CreateCountry(CreateCountryReq) returns (Void){}
+    rpc GetCountry(GetCountryReq) returns (GetCountryRes){}
+}
+message CreateCountryReq{
+    string name = 1;
+    string flag = 2;
+}
+message Void{}
+
+message GetCountryReq{
+    string name = 1;
+}
+
+message GetCountryRes{
+    string id = 1;
+    string name = 2;
+    string flag = 3;
+}
